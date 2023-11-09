@@ -6,7 +6,7 @@
 //     console.log(data.types[0].type.name)
 //      console.log(data.height/10)
 //      console.log ( "${data.name} pesa es  ${data.weight/10} kilos ") 
-//      console.log (data.photo)
+//      console.log (data.sprites.front_default)
 //  }
 // )
 
@@ -33,19 +33,38 @@ return data
 // getpokemon()
 
 // traemos contenedor
-const container =document.querySelector(".container")
+
+const container = document.querySelector(`.container`)
+
+// template html
+const templatepokemon = (pokemon) => {
+    const {name, sprites, weight, height, types} = pokemon
+    container.innerHTML = `
+    <div class= "card">
+    <img src='${sprites.front_default}' class="card-img">
+<h2 class= "card-title">${name}</h2>
+<div class=flexing>
+<p class="card-button" > ${types[0].type.name}<p/>
+<p class="card-button" > ${types[1].type.name}<p/>
+<div/>
+</div>
+
+    `
+}
 
 // Renderizar pokemon 
 
-const renderpokemon= async () => {
+const renderPokemon= async () => {
     const pokemon = await getpokemon ()
-
-    container.innerHTML = `
-    <h2>${pokemon.name}</h2>`
-    
-    
-    
+    templatepokemon(pokemon)
 
 }
+renderPokemon()
+    // container.innerHTML = `
+    // <h2 class="card-title">${pokemon.name}</h2>
+    // <img src =${pokemon.sprites.front_default} > 
+    
 
-renderpokemon()
+
+    
+    
