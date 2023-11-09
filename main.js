@@ -44,8 +44,9 @@ const templatepokemon = (pokemon) => {
     <img src='${sprites.front_default}' class="card-img">
 <h2 class= "card-title">${name}</h2>
 <div class=flexing>
-<p class="card-button" > ${types[0].type.name}<p/>
-<p class="card-button" > ${types[1].type.name}<p/>
+<p class="card-button" > Tipo: ${types[0].type.name} y ${types[1].type.name}<p/>
+<p class="card-button" > Peso: ${weight/10} Kilos <p/>
+<p class="card-button" > Altura: ${height/10} metros <p/>
 <div/>
 </div>
 
