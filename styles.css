@@ -27,13 +27,21 @@
   }
   
   main {
+    background-color: red;
     padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+  
     align-items: flex-start;
     gap: 20px;
+  }
+
+  .buscador{
+    display: flex;
+    flex-direction:row;
+    align-items: center; 
+
   }
   
   h1 {
@@ -80,7 +88,7 @@
   /*  */
   .card {
     background-color: skyblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     color: #252525;
     display: flex;
     flex-direction: column;
@@ -93,8 +101,9 @@
   }
   
   .card-img {
+    background-color: rgb(236, 231, 231);
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 2rem;
   }
   
   .card-title {
@@ -105,7 +114,7 @@
   
   .card-button {
     background-color: rgb(8, 8, 22);
-    color: rgb(12, 93, 214);
+    color: rgb(6, 101, 243);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
