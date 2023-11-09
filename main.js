@@ -6,7 +6,7 @@ fetch ( "https://pokeapi.co/api/v2/pokemon/890" )
     console.log(data.types)
     console.log(data.height/10)
     console.log (data.weight/10) 
-    console.log (data.img)
+    console.log (data.photo)
 }
 )
 
